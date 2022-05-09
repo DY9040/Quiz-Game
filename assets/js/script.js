@@ -71,6 +71,127 @@ function countdown() {
 }
 
 
+// correct answers and incorrect 
+var correctVar1 = function() {
+console.log("Correct!");
+score++;
+question2();
+}
+
+var incorrectVar1 = function() {
+    console.log("Incorrect!");
+    question2();
+    timeLeft = timeLeft -10;
+}
+
+var correctVar2 = function() {
+    console.log("Correct!");
+    score++;
+    question3();
+    }
+    
+    var incorrectVar2 = function() {
+        console.log("Incorrect!");
+        question3();
+        timeLeft = timeLeft -10;
+    }
+
+    var correctVar3 = function() {
+        console.log("Correct!");
+        score++;
+        question4();
+        }
+        
+        var incorrectVar3 = function() {
+            console.log("Incorrect!");
+            question4();
+            timeLeft = timeLeft -10;
+        }
+
+        var correctVar4 = function() {
+            console.log("Correct!");
+            score++;
+            question5();
+            }
+            
+            var incorrectVar4 = function() {
+                console.log("Incorrect!");
+                question5();
+                timeLeft = timeLeft -10;
+            }
+
+            var correctVar5 = function() {
+                console.log("Correct!");
+                score++;
+                question6();
+                }
+                
+                var incorrectVar5 = function() {
+                    console.log("Incorrect!");
+                    question6();
+                    timeLeft = timeLeft -10;
+                }
+
+                var correctVar6 = function() {
+                    console.log("Correct!");
+                    score++;
+                    question7();
+                    }
+                    
+                    var incorrectVar6 = function() {
+                        console.log("Incorrect!");
+                        question7();
+                        timeLeft = timeLeft -10;
+                    }
+
+                    var correctVar7 = function() {
+                        console.log("Correct!");
+                        score++;
+                        question8();
+                        }
+                        
+                        var incorrectVar7 = function() {
+                            console.log("Incorrect!");
+                            question8();
+                            timeLeft = timeLeft -10;
+                        }
+
+                        var correctVar8 = function() {
+                            console.log("Correct!");
+                            score++;
+                            question9();
+                            }
+                            
+                            var incorrectVar8 = function() {
+                                console.log("Incorrect!");
+                                question9();
+                                timeLeft = timeLeft -10;
+                            }
+
+                            var correctVar9 = function() {
+                                console.log("Correct!");
+                                score++;
+                                question10();
+                                }
+                                
+                                var incorrectVar9 = function() {
+                                    console.log("Incorrect!");
+                                    question10();
+                                    timeLeft = timeLeft -10;
+                                }
+
+                                var correctVar10 = function() {
+                                    console.log("Correct!");
+                                    score++;
+                                    endScreen();
+                                    }
+                                    
+                                    var incorrectVar10 = function() {
+                                        console.log("Incorrect!");
+                                        EndScreen();
+                                        timeLeft = timeLeft -10;
+                                    }
+
 // Code Questions 
 var question1 =function() {
     homepageEl.innerHTML = "";
