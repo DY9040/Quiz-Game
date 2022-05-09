@@ -1,15 +1,8 @@
-// 1 You will only have <span> 30 seconds</span> per Question 
-// 2. once you select your answer, you cant reselect.
-// 3. you cant select any option once time goes off.
-// 4. You cant exit from the Quiz while youre playing.
-// 5. You'll get points on the basis of your correct answers. 
-// 6. You'll be able to log high score. 
-
 var introNameEl = document.querySelector('#intro-name');
 var infoTxtEl = document.querySelector('#info-text');
 var homepageEl = document.querySelector('#homepage');
 var choicesEl = document.querySelector('#choices');
-var buttonsEL = document.querySelector('#buttons')
+var buttonsEl = document.querySelector("#buttons")
 
 
 var score = 0;
@@ -33,14 +26,14 @@ var createButton3 = function() {
     var btn3 = document.createElement("button");
     btn3.textContent = "Answer 3";
     btn3.className ="start-btn";
-    btn3.id ="selection1";
+    btn3.id ="selection3";
     homepageEl.appendChild(btn3);
 }
 var createButton4 = function() {
     var btn4 = document.createElement("button");
     btn4.textContent = "Answer 4";
     btn4.className ="start-btn";
-    btn4.id ="selection1";
+    btn4.id ="selection4";
     homepageEl.appendChild(btn4);
 }
 
@@ -54,21 +47,6 @@ var createQuestion = function() {
 
 
 
-// Timer
-var timerEl = document.getElementById('timer');
-var timeLeft = 75;
-function countdown() {
-
-    var timeInterval = setInterval(function(){
-        timerEl.innerHTML = timeLeft;
-        if(timeLeft => 0) {
-            endScreen();
-            clearInterval(timeInterval);
-            timerEl.textContent = "";
-        }
-        timerLeft--;
-    }, 1000);
-}
 
 
 // correct answers and incorrect 
@@ -193,7 +171,7 @@ var correctVar2 = function() {
                                     }
 
 // Code Questions 
-var question1 =function() {
+var question1 = function() {
     homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
@@ -201,19 +179,19 @@ var question1 =function() {
     createButton3();
     createButton4();
 
-    headTextEl.innerHTML = "Which is NOT a primitive data type?"
+    introNameEl.innerHTML = "Which is NOT a primitive data type?";
     selection1.innerHTML = "String";
-    selection1.innerHTML = "Number";
-    selection1.innerHTML = "Function";
-    selection1.innerHTML = "Boolean";
+    selection2.innerHTML = "Number";
+    selection3.innerHTML = "Function";
+    selection4.innerHTML = "Boolean";
 
     selection1.addEventListener("click",incorrectVar1);
-    selection1.addEventListener("click",incorrectVar1);
-    selection1.addEventListener("click",correctVar1);
-    selection1.addEventListener("click",incorrectVar1);
+    selection2.addEventListener("click",incorrectVar1);
+    selection3.addEventListener("click",correctVar1);
+    selection4.addEventListener("click",incorrectVar1);
 
 }
-var question2 =function() {
+var question2 = function() {
     homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
@@ -221,19 +199,19 @@ var question2 =function() {
     createButton3();
     createButton4();
 
-    headTextEl.innerHTML = "What special characters incase an array?"
+    introNameEl.innerHTML = "What special characters incase an array?";
     selection1.innerHTML = "[]";
-    selection1.innerHTML = "{}";
-    selection1.innerHTML = "()";
-    selection1.innerHTML = "<>";
+    selection2.innerHTML = "{}";
+    selection3.innerHTML = "()";
+    selection4.innerHTML = "<>";
 
     selection1.addEventListener("click",correctVar2);
-    selection1.addEventListener("click",incorrectVar2);
-    selection1.addEventListener("click",incorrectVar2);
-    selection1.addEventListener("click",incorrectVar2);
+    selection2.addEventListener("click",incorrectVar2);
+    selection3.addEventListener("click",incorrectVar2);
+    selection4.addEventListener("click",incorrectVar2);
 
 }
-var question3 =function() {
+var question3 = function() {
     homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
@@ -241,19 +219,19 @@ var question3 =function() {
     createButton3();
     createButton4();
 
-    headTextEl.innerHTML = "What runs forever until the condition is false?"
+    introNameEl.innerHTML = "What runs forever until the condition is false?";
     selection1.innerHTML = "methods";
-    selection1.innerHTML = "loops";
-    selection1.innerHTML = "objects";
-    selection1.innerHTML = "functions";
+    selection2.innerHTML = "loops";
+    selection3.innerHTML = "objects";
+    selection4.innerHTML = "functions";
 
     selection1.addEventListener("click",incorrectVar3);
-    selection1.addEventListener("click",correctVar3);
-    selection1.addEventListener("click",incorrectVar3);
-    selection1.addEventListener("click",incorrectVar3);
+    selection2.addEventListener("click",correctVar3);
+    selection3.addEventListener("click",incorrectVar3);
+    selection4.addEventListener("click",incorrectVar3);
 
 }
-var question4 =function() {
+var question4 = function() {
     homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
@@ -261,19 +239,19 @@ var question4 =function() {
     createButton3();
     createButton4();
 
-    headTextEl.innerHTML = "what would you use to write a conditional statement?"
+    introNameEl.innerHTML = "what would you use to write a conditional statement?";
     selection1.innerHTML = "if & else";
-    selection1.innerHTML = "function()";
-    selection1.innerHTML = "for ..";
-    selection1.innerHTML = "for & loop";
+    selection2.innerHTML = "function()";
+    selection3.innerHTML = "for ..";
+    selection4.innerHTML = "for & loop";
 
     selection1.addEventListener("click",correctVar4);
-    selection1.addEventListener("click",incorrectVar4);
-    selection1.addEventListener("click",correctVar4);
-    selection1.addEventListener("click",incorrectVar4);
+    selection2.addEventListener("click",incorrectVar4);
+    selection3.addEventListener("click",correctVar4);
+    selection4.addEventListener("click",incorrectVar4);
 
 }
-var question5 =function() {
+var question5 = function() {
     homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
@@ -281,19 +259,19 @@ var question5 =function() {
     createButton3();
     createButton4();
 
-    headTextEl.innerHTML = "Where do you attach the JS source file in the HTML document?"
+    introNameEl.innerHTML = "Where do you attach the JS source file in the HTML document?";
     selection1.innerHTML = "in the body";
-    selection1.innerHTML = "top of the page";
-    selection1.innerHTML = "in the header";
-    selection1.innerHTML = "bottom of the page";
+    selection2.innerHTML = "top of the page";
+    selection3.innerHTML = "in the header";
+    selection4.innerHTML = "bottom of the page";
 
     selection1.addEventListener("click",incorrectVar5);
-    selection1.addEventListener("click",incorrectVar5);
-    selection1.addEventListener("click",incorrectVar5);
-    selection1.addEventListener("click",correctVar5);
+    selection2.addEventListener("click",incorrectVar5);
+    selection3.addEventListener("click",incorrectVar5);
+    selection4.addEventListener("click",correctVar5);
 
 }
-var question6 =function() {
+var question6 = function() {
     homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
@@ -301,19 +279,19 @@ var question6 =function() {
     createButton3();
     createButton4();
 
-    headTextEl.innerHTML = "How could you target an HTML id in JS?"
+    introNameEl.innerHTML = "How could you target an HTML id in JS?";
     selection1.innerHTML = ".addEventListener";
-    selection1.innerHTML = ".querySelector";
-    selection1.innerHTML = ".createElement";
-    selection1.innerHTML = ".parse";
+    selection2.innerHTML = ".querySelector";
+    selection3.innerHTML = ".createElement";
+    selection4.innerHTML = ".parse";
 
     selection1.addEventListener("click",incorrectVar6);
-    selection1.addEventListener("click",correctVar6);
-    selection1.addEventListener("click",incorrectVar6);
-    selection1.addEventListener("click",incorrectVar6);
+    selection2.addEventListener("click",correctVar6);
+    selection3.addEventListener("click",incorrectVar6);
+    selection4.addEventListener("click",incorrectVar6);
 
 }
-var question7 =function() {
+var question7 = function() {
     homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
@@ -321,19 +299,19 @@ var question7 =function() {
     createButton3();
     createButton4();
 
-    headTextEl.innerHTML = "What does DOM Stand For"
+    introNameEl.innerHTML = "What does DOM Stand For?";
     selection1.innerHTML = "Digital Organization Machine";
-    selection1.innerHTML = "Do only More";
-    selection1.innerHTML = "Document Object Model";
-    selection1.innerHTML = "Document Ordering Model";
+    selection2.innerHTML = "Do only More";
+    selection3.innerHTML = "Document Object Model";
+    selection4.innerHTML = "Document Ordering Model";
 
     selection1.addEventListener("click",incorrectVar7);
-    selection1.addEventListener("click",incorrectVar7);
-    selection1.addEventListener("click",correctVar7);
-    selection1.addEventListener("click",incorrectVar7);
+    selection2.addEventListener("click",incorrectVar7);
+    selection3.addEventListener("click",correctVar7);
+    selection4.addEventListener("click",incorrectVar7);
 
 }
-var question8 =function() {
+var question8 = function() {
     homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
@@ -341,19 +319,19 @@ var question8 =function() {
     createButton3();
     createButton4();
 
-    headTextEl.innerHTML = "what Java script function is used for buttons?";
+    introNameEl.innerHTML = "what Java script function is used for buttons?";
     selection1.innerHTML = ".selectById";
-    selection1.innerHTML = ".addEventListener";
-    selection1.innerHTML = "onClick";
-    selection1.innerHTML = ".setAttribute";
+    selection2.innerHTML = ".addEventListener";
+    selection3.innerHTML = "onClick";
+    selection4.innerHTML = ".setAttribute";
 
     selection1.addEventListener("click",incorrectVar8);
-    selection1.addEventListener("click",correctVar8);
-    selection1.addEventListener("click",incorrectVar8);
-    selection1.addEventListener("click",incorrectVar8);
+    selection2.addEventListener("click",correctVar8);
+    selection3.addEventListener("click",incorrectVar8);
+    selection4.addEventListener("click",incorrectVar8);
 
 }
-var question9 =function() {
+var question9 = function() {
     homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
@@ -361,19 +339,19 @@ var question9 =function() {
     createButton3();
     createButton4();
 
-    headTextEl.innerHTML = "What is a useful tool developers use for development and debugging?"
+    introNameEl.innerHTML = "What is a useful tool developers use for development and debugging?";
     selection1.innerHTML = "console.log";
-    selection1.innerHTML = "terminal/bash";
-    selection1.innerHTML = "For Loops";
-    selection1.innerHTML = "DOM";
+    selection2.innerHTML = "terminal/bash";
+    selection3.innerHTML = "For Loops";
+    selection4.innerHTML = "DOM";
 
     selection1.addEventListener("click",correctVar9);
-    selection1.addEventListener("click",incorrectVar9);
-    selection1.addEventListener("click",incorrectVar9);
-    selection1.addEventListener("click",incorrectVar9);
+    selection2.addEventListener("click",incorrectVar9);
+    selection3.addEventListener("click",incorrectVar9);
+    selection4.addEventListener("click",incorrectVar9);
 
 }
-var question10 =function() {
+var question10 = function() {
     homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
@@ -381,19 +359,61 @@ var question10 =function() {
     createButton3();
     createButton4();
 
-    headTextEl.innerHTML = "Bonus Who won the 74th Hunger Games?"
+    introNameEl.innerHTML = "Bonus Who won the 74th Hunger Games?";
     selection1.innerHTML = "Lucy Gray Baird";
-    selection1.innerHTML = "Katniss Everdeen";
-    selection1.innerHTML = "Finnick Odair";
-    selection1.innerHTML = "Katniss Everdeen and Peeta Mellark";
+    selection2.innerHTML = "Katniss Everdeen";
+    selection3.innerHTML = "Finnick Odair";
+    selection4.innerHTML = "Katniss Everdeen and Peeta Mellark";
 
     selection1.addEventListener("click",incorrectVar10);
-    selection1.addEventListener("click",incorrectVar10);
-    selection1.addEventListener("click",incorrectVar10);
-    selection1.addEventListener("click",correctVar10);
+    selection2.addEventListener("click",incorrectVar10);
+    selection3.addEventListener("click",incorrectVar10);
+    selection4.addEventListener("click",correctVar10);
 
 }
 
-//starts teh game 
-buttonsEl.addEventListener("click",question1);
+var endScreen = function() {
+    homepageEl.innerHTML = "";
+    introNameEl = document.createElement("h1");
+    introNameEl.innerHTML = "You Scored a " + score + "/10";
+    introNameEl.className = "intro-name";
+    homepageEl.appendChild(introNameEl);
+
+    infoTxtEl = document.createElement("p");
+    infoTxtEl.innerHTML = "Enter Your Name: "
+    infoTxtEl.className = "info-txt"
+    homepageEl.appendChild(infoTxtEl);
+
+    var nameInput = document.createElement("input");
+    infoTxtEl.appendChild(nameInput);
+
+    var submitButton = document.createElement("button")
+    submitButton.textContent = "Submit";
+    submitButton.type = "submit";
+    submitButton.className = "start-btn";
+    submitButton.id = 'submitId';
+    homepageEl.appendChild(submitButton);
+
+    submitButton.addEventListener("click", function(event){
+        event.preventDefault();
+    })
+}
+
+// Timer
+var timerEl = document.getElementById('timer');
+var timeLeft = 75;
+function countdown() {
+
+    var timeInterval = setInterval(function(){
+        timerEl.innerHTML = timeLeft;
+        if(timeLeft <= 0) {
+            endScreen();
+            clearInterval(timeInterval);
+            timerEl.textContent = "";
+        }
+        timeLeft--;
+    }, 1000);
+}
+//starts the game 
+buttonsEl.addEventListener("click", question1);
 buttonsEl.addEventListener("click", countdown);
