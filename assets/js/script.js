@@ -5,6 +5,47 @@
 // 5. You'll get points on the basis of your correct answers. 
 // 6. You'll be able to log high score. 
 
+// Creates the Buttons to answer the quiz questions
+var createButton1 = function() {
+    var btn1 = document.createElement("button");
+    btn1.textContent = "Answer 1";
+    btn1.className ="start-btn";
+    btn1.id ="selection1";
+    pageContentEl.appendChild(btn1);
+}
+var createButton2 = function() {
+    var btn2 = document.createElement("button");
+    btn2.textContent = "Answer 2";
+    btn2.className ="start-btn";
+    btn2.id ="selection2";
+    pageContentEl.appendChild(btn2);
+}
+var createButton3 = function() {
+    var btn3 = document.createElement("button");
+    btn3.textContent = "Answer 3";
+    btn3.className ="start-btn";
+    btn3.id ="selection1";
+    pageContentEl.appendChild(btn3);
+}
+var createButton4 = function() {
+    var btn4 = document.createElement("button");
+    btn4.textContent = "Answer 4";
+    btn4.className ="start-btn";
+    btn4.id ="selection1";
+    pageContentEl.appendChild(btn4);
+}
+
+// Generates teh Question
+var createQuestion = function() {
+    introNameEl = document.createElement("h1");
+    introNameEl.innerHTML = "";
+    introNameEl.className = "intro-name"
+    pageContentEl.appendChild(introNameEl);
+}
+
+
+
+
 // Code Questions 
 var question1 =function() {
     pageContentEl.innerHTML = "";
@@ -206,3 +247,6 @@ var question10 =function() {
     selection1.addEventListener("click",correctVar10);
 
 }
+
+//starts teh game 
+buttonsEl.addEventListener("click",question1);
