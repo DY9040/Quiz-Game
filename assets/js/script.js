@@ -5,50 +5,75 @@
 // 5. You'll get points on the basis of your correct answers. 
 // 6. You'll be able to log high score. 
 
+var introNameEl = document.querySelector('#intro-name');
+var infoTxtEl = document.querySelector('#info-text');
+var homepageEl = document.querySelector('#homepage');
+var choicesEl = document.querySelector('#choices');
+var buttonsEL = document.querySelector('#buttons')
+
+
+var score = 0;
+
 // Creates the Buttons to answer the quiz questions
 var createButton1 = function() {
     var btn1 = document.createElement("button");
     btn1.textContent = "Answer 1";
     btn1.className ="start-btn";
     btn1.id ="selection1";
-    pageContentEl.appendChild(btn1);
+    homepageEl.appendChild(btn1);
 }
 var createButton2 = function() {
     var btn2 = document.createElement("button");
     btn2.textContent = "Answer 2";
     btn2.className ="start-btn";
     btn2.id ="selection2";
-    pageContentEl.appendChild(btn2);
+    homepageEl.appendChild(btn2);
 }
 var createButton3 = function() {
     var btn3 = document.createElement("button");
     btn3.textContent = "Answer 3";
     btn3.className ="start-btn";
     btn3.id ="selection1";
-    pageContentEl.appendChild(btn3);
+    homepageEl.appendChild(btn3);
 }
 var createButton4 = function() {
     var btn4 = document.createElement("button");
     btn4.textContent = "Answer 4";
     btn4.className ="start-btn";
     btn4.id ="selection1";
-    pageContentEl.appendChild(btn4);
+    homepageEl.appendChild(btn4);
 }
 
-// Generates teh Question
+// Generates the Question
 var createQuestion = function() {
     introNameEl = document.createElement("h1");
     introNameEl.innerHTML = "";
     introNameEl.className = "intro-name"
-    pageContentEl.appendChild(introNameEl);
+    homepageEl.appendChild(introNameEl);
 }
 
 
 
+// Timer
+var timerEl = document.getElementById('timer');
+var timeLeft = 75;
+function countdown() {
+
+    var timeInterval = setInterval(function(){
+        timerEl.innerHTML = timeLeft;
+        if(timeLeft => 0) {
+            endScreen();
+            clearInterval(timeInterval);
+            timerEl.textContent = "";
+        }
+        timerLeft--;
+    }, 1000);
+}
+
 
 // Code Questions 
 var question1 =function() {
-    pageContentEl.innerHTML = "";
+    homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
     createButton2();
@@ -68,7 +93,7 @@ var question1 =function() {
 
 }
 var question2 =function() {
-    pageContentEl.innerHTML = "";
+    homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
     createButton2();
@@ -88,7 +113,7 @@ var question2 =function() {
 
 }
 var question3 =function() {
-    pageContentEl.innerHTML = "";
+    homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
     createButton2();
@@ -108,7 +133,7 @@ var question3 =function() {
 
 }
 var question4 =function() {
-    pageContentEl.innerHTML = "";
+    homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
     createButton2();
@@ -128,7 +153,7 @@ var question4 =function() {
 
 }
 var question5 =function() {
-    pageContentEl.innerHTML = "";
+    homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
     createButton2();
@@ -148,7 +173,7 @@ var question5 =function() {
 
 }
 var question6 =function() {
-    pageContentEl.innerHTML = "";
+    homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
     createButton2();
@@ -168,7 +193,7 @@ var question6 =function() {
 
 }
 var question7 =function() {
-    pageContentEl.innerHTML = "";
+    homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
     createButton2();
@@ -188,7 +213,7 @@ var question7 =function() {
 
 }
 var question8 =function() {
-    pageContentEl.innerHTML = "";
+    homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
     createButton2();
@@ -208,7 +233,7 @@ var question8 =function() {
 
 }
 var question9 =function() {
-    pageContentEl.innerHTML = "";
+    homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
     createButton2();
@@ -228,7 +253,7 @@ var question9 =function() {
 
 }
 var question10 =function() {
-    pageContentEl.innerHTML = "";
+    homepageEl.innerHTML = "";
     createQuestion();
     createButton1();
     createButton2();
@@ -250,3 +275,4 @@ var question10 =function() {
 
 //starts teh game 
 buttonsEl.addEventListener("click",question1);
+buttonsEl.addEventListener("click", countdown);
